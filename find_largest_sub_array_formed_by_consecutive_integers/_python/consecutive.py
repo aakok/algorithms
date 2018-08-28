@@ -14,7 +14,7 @@ def consecutive_sub_array(arr):
     length = 0
     start, end = 0, 0
     for i in range(arr.__len__()):
-        for j in range(i + 1, arr.__len__()):
+        for j in range(i + 1, arr.__len__() + 1):
             max_val, min_val = arr[i], arr[i]
             for k in range(i, j):
                 max_val, min_val = max(arr[k], max_val), min(arr[k], min_val)
