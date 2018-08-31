@@ -1,6 +1,3 @@
-import pickle
-
-
 def find_pairs_naive(arr, _sum):
     res = 0
     for i in range(arr.__len__()):
@@ -18,12 +15,3 @@ def find_pairs_hash(arr, _sum):
             res += 1
         table[v] = 0
     return res
-
-
-array = []
-with open("array.pickle") as f:
-    array = pickle.load(f)
-
-total = 1000
-
-print(find_pairs_hash(array, total))

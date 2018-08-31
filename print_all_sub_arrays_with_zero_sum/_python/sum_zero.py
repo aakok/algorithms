@@ -24,6 +24,12 @@ def find_combs(arr, n):
 
 
 def sum_zero(arr):
+    """
+    :param arr:
+    :return:
+
+    this function finds the sum zeros in all possible combinations.
+    """
     res = []
     for i in range(1, arr.__len__()):
         for comb in find_combs(arr, i):
@@ -33,15 +39,16 @@ def sum_zero(arr):
 
 
 def sum_zero_sub_arr(arr):
+    """
+    :param arr:
+    :return:
+
+    this function finds the sum zero sub_arrays. not combinations.
+    """
     res = []
     for i in range(arr.__len__()):
-        for j in range(i+1, arr.__len__()):
-            if sum(arr[i:j+1]) == 0:
+        for j in range(i+1, arr.__len__() + 1):
+            if sum(arr[i:j]) == 0:
                 res.append((i, j))
     return res
 
-
-array = [4, 2, -3, -1, 0, 4]
-array = [3, 4, -7, 3, 1, 3, 1, -4, -2, -2]
-
-print sum_zero_sub_arr(array)
