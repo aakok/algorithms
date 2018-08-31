@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>
+        Shuffle a given array of elements (Fisher-Yates shuffle)
+    </title>
+</head>
+<body>
+<div class="wrap">
+<header class="entry-header">
+<h1 class="entry-title">Shuffle a given array of elements (Fisher-Yates shuffle)</h1>
+</header>
+<div class="entry-content">
+<div style="color: #000000; font-size:14px;"><p></p>
+<p style="color: #008200;font-size:16px">Given an array of integers, in-place shuffle it. The algorithm should produce an unbiased permutation i.e. every permutation is equally likely.</p>
+<p><span id="more-7802"></span><br>
+&nbsp;</p>
+<p>Fisher-Yates shuffle is used to generate random permutations. It takes time proportional to the number of items being shuffled and shuffles them in place. At each iteration, the algorithm swaps the element with one chosen at random amongst all remaining unvisited elements, including the element itself. Below is complete algorithm -</p>
+<div style="padding-left: 15px;">
+<font face="consolas" size="3"><br>
+<strong>- To shuffle an array a of n elements :</strong><br>
+for i from n-1 downto 1 do<br>
+&nbsp;&nbsp;&nbsp;&nbsp;j = random integer such that 0 &lt;= j &lt;= i</font><font face="consolas" size="3"><br>
+&nbsp;&nbsp;&nbsp;&nbsp;exchange a[j] and a[i]<br>
+</font>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
