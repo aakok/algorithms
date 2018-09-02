@@ -1,5 +1,5 @@
 import unittest
-from move_zeros import move_zeros
+from move_zeros import move_zeros, move_zeros_partition
 
 
 class MoveZerosTestCase(unittest.TestCase):
@@ -34,6 +34,43 @@ class MoveZerosTestCase(unittest.TestCase):
     def test_zero_in_the_beginning_input(self):
         array = [0, 0, 1, 2, 3, 4]
         move_zeros(array)
+        self.assertEqual(
+            array, [1, 2, 3, 4, 0, 0]
+        )
+
+    # ---------------------
+
+    def test_regular_input_partition(self):
+        array = [6, 0, 8, 2, 3, 0, 4, 0, 1]
+        move_zeros_partition(array)
+        self.assertEqual(
+            array, [6, 8, 2, 3, 4, 1, 0, 0, 0]
+        )
+
+    def test_empty_input_partition(self):
+        array = []
+        move_zeros_partition(array)
+        self.assertEqual(
+            array, []
+        )
+
+    def test_all_zero_input_partition(self):
+        array = [0, 0, 0, 0]
+        move_zeros_partition(array)
+        self.assertEqual(
+            array, [0, 0, 0, 0]
+        )
+
+    def test_non_zero_input_partition(self):
+        array = [1, 2, 3, 4]
+        move_zeros_partition(array)
+        self.assertEqual(
+            array, [1, 2, 3, 4]
+        )
+
+    def test_zero_in_the_beginning_input_partition(self):
+        array = [0, 0, 1, 2, 3, 4]
+        move_zeros_partition(array)
         self.assertEqual(
             array, [1, 2, 3, 4, 0, 0]
         )

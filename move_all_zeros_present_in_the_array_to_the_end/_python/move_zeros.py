@@ -26,3 +26,10 @@ def move_zeros(arr):
         if num == 0:
             shift(arr, i)
 
+
+def move_zeros_partition(arr):
+    j = 0
+    for i in range(arr.__len__()):
+        if arr[i] != 0:
+            arr[i], arr[j] = arr[j], arr[i]
+            j += 1
